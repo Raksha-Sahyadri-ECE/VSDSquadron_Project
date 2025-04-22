@@ -20,6 +20,6 @@ The top.v module controls the RGB LEDs on the FPGA by toggling the LED colors ba
 3. SB_RGBA_DRV: RGB driver that controls the LED color channels.
 
 **How It Works?**
-Oscillator: Uses the internal 12 MHz oscillator (SB_HFOSC) to drive the counter.
-Counter: Toggles LEDs after a certain number of clock cycles.
-RGB LED Driver: Controls the color mixing for the LEDs using SB_RGBA_DRV.
+1. Oscillator: Uses the internal 12 MHz oscillator (SB_HFOSC) to drive the counter.
+2. Counter: Toggles LEDs after a certain number of clock cycles.
+3. RGB LED Driver: Controls the color mixing for the LEDs using SB_RGBA_DRV.
