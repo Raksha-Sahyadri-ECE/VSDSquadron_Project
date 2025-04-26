@@ -23,24 +23,12 @@ Implement and demonstrate a **UART loopback mechanism** where transmitted data i
 ---
 
 ## Block diagram
-+----------------+             
-|                |             
-|    Host PC     |             
-| (Serial Port)  |             
-+-------+--------+             
-        | TX                        
-        V                            
-+----------------+         +------------------+
-|                |         |                  |
-|  USB-UART Chip |  <---->  |  VSDSquadron FPGA |
-|  (FTDI/CP2102) |          |  (UART Loopback)  |
-+----------------+         +------------------+
-                                      |
-                                      V
-                          +------------------------+
-                          |  UART RX  -> UART TX     |
-                          | (Receive → Loopback → Transmit) |
-                          +------------------------+
++------------+    TX/RX    +--------------+    TX/RX    +----------------------------+
+|  Host PC   | <---------> | USB-UART Chip | <---------> | VSDSquadron FPGA (Loopback) |
++------------+             +--------------+             +----------------------------+
+                                                          |  UART RX → Loopback → UART TX |
+                                                          +----------------------------+
+
 PC sends serial data to USB-UART adapter.
 
 USB-UART adapter communicates with the FPGA.
