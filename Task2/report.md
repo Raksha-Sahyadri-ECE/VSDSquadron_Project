@@ -1,12 +1,10 @@
 # UART Loopback on VSDSquadron FPGA Mini
 
----
 
 ## 🏁 Objective
 Implement and demonstrate a **UART loopback mechanism** where transmitted data is immediately received back, facilitating UART functionality testing on the **VSDSquadron FPGA Mini**.
 
 
----
 
 ## 🛠️ Setup Requirements
 
@@ -20,14 +18,9 @@ Implement and demonstrate a **UART loopback mechanism** where transmitted data i
   - **Parity**: None
   - **Stop Bits**: 1
 
----
 
 ## Block diagram
-+------------+    TX/RX    +--------------+    TX/RX    +----------------------------+
-|  Host PC   | <---------> | USB-UART Chip | <---------> | VSDSquadron FPGA (Loopback) |
-+------------+             +--------------+             +----------------------------+
-                                                          |  UART RX → Loopback → UART TX |
-                                                          +----------------------------+
+Host PC (Serial Port) → USB-UART Chip (FTDI/CP2102) ↔ VSDSquadron FPGA (UART RX → Loopback Logic → UART TX)
 
 PC sends serial data to USB-UART adapter.
 
@@ -36,12 +29,6 @@ USB-UART adapter communicates with the FPGA.
 FPGA receives the data and immediately transmits it back — Loopback completed.
 
 ## Circuit diagram
-
-+-------------------+             +--------------------+
-|    PC (Serial TX) | --------->   | FPGA (UART RX Pin)  |
-|    PC (Serial RX) | <---------   | FPGA (UART TX Pin)  |
-|       GND         | ------------ | FPGA GND           |
-+-------------------+             +--------------------+
 
 TX from PC goes to RX pin on FPGA.
 
