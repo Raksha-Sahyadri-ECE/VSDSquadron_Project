@@ -1,12 +1,12 @@
 # UART Loopback on VSDSquadron FPGA Mini
 
 
-## 🏁 Objective
+## Objective
 Implement and demonstrate a **UART loopback mechanism** where transmitted data is immediately received back, facilitating UART functionality testing on the **VSDSquadron FPGA Mini**.
 
 
 
-## 🛠️ Setup Requirements
+## Setup Requirements
 
   - VSDSquadron FPGA Mini board
   - USB-UART cable
