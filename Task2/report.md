@@ -13,7 +13,7 @@ Implement and demonstrate a **UART loopback mechanism** where transmitted data i
 
 
 - **UART Settings**:  
-  - **Baudrate**: 115200
+  - **Baudrate**: 9600
   - **Data Bits**: 8
   - **Parity**: None
   - **Stop Bits**: 1
