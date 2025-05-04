@@ -1,7 +1,7 @@
 
 ---
 
-## 🔍 Study of Existing Code
+## Study of Existing Code
 
 The `uart_trx.v` and `top.v` files contain the core logic for serial data transmission via UART.
 
@@ -16,9 +16,8 @@ Key parameters:
 
 ---
 
-## 📐 Design Documentation
 
-### 🖼️ Block Diagram
+## Block Diagram
 
 The following illustrates how the UART transmitter module interacts with external devices.
 
@@ -26,12 +25,12 @@ Data generator - UART transmitter - FPGA TX pin - USB to Serial Converter - Seri
 
 ---
 
-## 🔧 Implementation
+## Implementation
 
-### 🛠️ Hardware Setup
+### Hardware Setup
 - Connect the FPGA board to the laptop.
 
-### 🧠 Programming Steps
+### Programming Steps
 1. Create the files: Makefile, VSDSquadronFM.pcf, top.v, and uart_trx.v
 2. #### Enter into the folder containing these files and execute the following:
    - make build
@@ -39,7 +38,7 @@ Data generator - UART transmitter - FPGA TX pin - USB to Serial Converter - Seri
 
 ---
 
-## 🧪 Testing and Verification
+## Testing and Verification
 
 ### Requirements
 - PuTTY or Minicom (serial terminal)
