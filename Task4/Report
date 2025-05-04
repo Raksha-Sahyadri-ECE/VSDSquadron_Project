@@ -6,9 +6,9 @@ Implement a UART transmitter that sends real-time data from a sensor through the
 
 ---
 
-## 🧱 Project Structure
+## Project Structure/Block Diagram
 
-
+![Block Diagram](Task4/Block%20diagram.png)
 ---
 
 ## 🧩 Circuit Connections
