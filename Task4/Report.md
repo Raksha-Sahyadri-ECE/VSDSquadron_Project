@@ -8,14 +8,14 @@ Implement a UART transmitter that sends real-time data from a sensor through the
 
 ## Project Structure/Block Diagram
 
-![Block Diagram](Task4/Block%20diagram.png)
+![Block Diagram](Task4/Block diagram.png)
 ---
 
 ## 🧩 Circuit Connections
 
 - Sensor data → FPGA GPIO input pin
 - FPGA TX (UART) → USB-to-Serial Converter (FTDI)
-- USB → PC (e.g., COM7 on Windows)
+- USB → PC (e.g., COM7 or COM3 on Windows)
 - Common GND between FPGA and sensor
 
 ---
@@ -37,9 +37,8 @@ Implement a UART transmitter that sends real-time data from a sensor through the
 
 1. Clone or download this repository.
 2. Connect your sensor to the appropriate FPGA GPIO.
-3. Synthesize the design using [Yosys/NextPNR](https://github.com/YosysHQ/nextpnr) or a toolchain like [icestorm](https://github.com/cliffordwolf/icestorm).
-4. Flash the bitstream to the VSDSquadron FM board.
-5. Connect the board to your PC via USB.
+3. Flash the bitstream to the VSDSquadron FM board.
+4. Connect the board to your PC via USB.
 
 ---
 
@@ -47,16 +46,14 @@ Implement a UART transmitter that sends real-time data from a sensor through the
 
 ### Tools Used:
 - **PuTTY** (Windows Serial Terminal)
-- **COM7** (or applicable COM port)
-- **Baud Rate:** `115200`
+- **COM3** (or applicable COM port)
+- **Baud Rate:** `9600`
 
 ### Test Steps:
 1. Open PuTTY → Set connection type to **Serial**.
-2. Set **Serial line** to `COM7`, **Speed** to `115200`.
+2. Set **Serial line** to `COM3`, **Speed** to `9600`.
 3. Click **Open**.
-4. Stimulate sensor (e.g., button press or change in temperature).
-5. Observe output in terminal window: e.g., `Sensor Triggered`, `Value = 42`, etc.
-6. Verify RGB LED behavior (optional).
+4. Verify RGB LED behavior.
 
 ---
 
