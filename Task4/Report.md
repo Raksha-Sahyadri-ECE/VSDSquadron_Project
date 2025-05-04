@@ -8,7 +8,7 @@ Implement a UART transmitter that sends real-time data from a sensor through the
 
 ## Project Structure/Block Diagram
 
-Sensor - FPGA logic (UART transmitter) - Serial Monitor (PuTTY)
+### Sensor - FPGA logic (UART transmitter) - Serial Monitor (PuTTY)
 ---
 
 ## 🧩 Circuit Connections
