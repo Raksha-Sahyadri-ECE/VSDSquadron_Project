@@ -8,7 +8,6 @@ All LEDs OFF → 1 LED ON → 2 LEDs ON → 3 LEDs ON → All LEDs OFF → Repea
 
 This project exemplifies how to decode serial UART commands and translate them into physical outputs on FPGA pins, forming the basis for controlling actuators like motors, LEDs, or relays.
 
-
 ## Key Learning Objectives
 
 - Parse and interpret UART command protocols: Implement a UART receiver module to read incoming serial data and detect valid commands.
@@ -16,27 +15,21 @@ This project exemplifies how to decode serial UART commands and translate them i
 - Implement state machine logic: Cycle through actuator states in response to valid inputs.
 - Ensure reliable hardware operation: Handle signal synchronization and debounce inputs to prevent erratic behavior.
 
-
-
 ## Potential Applications
 
 - Home Automation: Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
 - Robotics: Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
 - Industrial Controls: Actuate relays or indicators in response to serial control signals in embedded systems.
 
----
-
 ## System Architecture
 
-
+![System Architecture](Task%205/system_architecture.png)
 Key components:
 
 - UART Receiver Module: Receives and decodes serial data.
 - Control Logic: Manages LED states based on received commands.
 - Output Pins: Drive LEDs to reflect current actuator state.
-````
 
----
 
 ## Project Structure
 
@@ -45,39 +38,19 @@ Key components:
 - `vsdsquadron.pcf` — Pin constraints file mapping FPGA pins to LEDs and UART signals.
 - `Makefile` — Build, flash, and terminal interface automation using yosys, nextpnr, and iceprog.
 
----
 
 ## How to Use
 
-1. Build the project:**
-
-   ```bash
+1. Build the project:
    make build
-   ```
 
-2. Flash the bitstream to your FPGA:**
-
-   ```bash
+2. Flash the bitstream to your FPGA:
    sudo make flash
-   ```
+   
+3. Open a serial terminal at 9600 baud:
+   Example: PuTTY
+   
+4. Type 1, 2, 3, 4 via UART — LEDs will cycle through:
 
-3. Open a serial terminal at 9600 baud** (adjust `/dev/ttyUSB0` in Makefile as needed):
-
-   ```bash
-   make terminal
-   ```
-
-4. Send any key via UART** — LEDs will cycle through:
-
-   ```
-   OFF → 1 LED ON → 2 LEDs ON → 3 LEDs ON → OFF → ...
-   ```
-
----
-
-## Future Enhancements
-
-- Extend actuator control to motors or relays with added driver circuitry.
-- Implement command parsing for specific UART messages (e.g., "LED1 ON", "MOTOR START").
-- Add feedback via UART TX to confirm received commands.
-- Incorporate safety checks and hardware fault detection.
+  3 LEDs ON → 2 LED ON → 1 LED ON → OFF → ...
+ 
