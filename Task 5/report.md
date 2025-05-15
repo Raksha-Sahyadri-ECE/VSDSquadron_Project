@@ -15,15 +15,8 @@ This project exemplifies how to decode serial UART commands and translate them i
 - Implement state machine logic: Cycle through actuator states in response to valid inputs.
 - Ensure reliable hardware operation: Handle signal synchronization and debounce inputs to prevent erratic behavior.
 
-## Potential Applications
-
-- Home Automation: Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
-- Robotics: Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
-- Industrial Controls: Actuate relays or indicators in response to serial control signals in embedded systems.
-
 ## System Architecture
 
-![System Architecture](Task%205/system_architecture.png)
 Key components:
 
 - UART Receiver Module: Receives and decodes serial data.
@@ -53,4 +46,10 @@ Key components:
 4. Type 1, 2, 3, 4 via UART — LEDs will cycle through:
 
   3 LEDs ON → 2 LED ON → 1 LED ON → OFF → ...
+  
+ ## Potential Applications
+
+- Home Automation: Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
+- Robotics: Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
+- Industrial Controls: Actuate relays or indicators in response to serial control signals in embedded systems.
  
