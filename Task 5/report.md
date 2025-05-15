@@ -4,13 +4,10 @@
 
 This project demonstrates a simple yet effective system where an FPGA receives control commands via UART and operates actuators accordingly. Specifically, this design controls a set of LEDs to visually indicate received commands, cycling through the following states with each valid UART input:
 
-
 All LEDs OFF → 1 LED ON → 2 LEDs ON → 3 LEDs ON → All LEDs OFF → Repeat
-
 
 This project exemplifies how to decode serial UART commands and translate them into physical outputs on FPGA pins, forming the basis for controlling actuators like motors, LEDs, or relays.
 
----
 
 ## Key Learning Objectives
 
@@ -23,19 +20,14 @@ This project exemplifies how to decode serial UART commands and translate them i
 
 ## Potential Applications
 
-- Home Automation:** Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
-- Robotics:** Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
-- Industrial Controls:** Actuate relays or indicators in response to serial control signals in embedded systems.
+- Home Automation: Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
+- Robotics: Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
+- Industrial Controls: Actuate relays or indicators in response to serial control signals in embedded systems.
 
 ---
 
 ## System Architecture
 
-```plaintext
-+-----------+       UART RX        +---------+      GPIO Outputs     +---------+
-|  UART TX  | ------------------>  |  FPGA   | --------------------> |  LEDs   |
-|  (Host)   |                      |         |                       |         |
-+-----------+                      +---------+                       +---------+
 
 Key components:
 
