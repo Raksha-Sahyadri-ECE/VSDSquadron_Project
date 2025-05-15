@@ -68,15 +68,6 @@ Key components:
 - Control Logic: Manages LED states based on received commands.
 - Output Pins: Drive LEDs to reflect current actuator state.
 
-
-## Project Structure
-
-- `top.v` — Top-level module integrating UART RX and LED control logic.
-- `uart_rx.v` — UART receiver module (8 data bits, no parity, 1 stop bit).
-- `vsdsquadron.pcf` — Pin constraints file mapping FPGA pins to LEDs and UART signals.
-- `Makefile` — Build, flash, and terminal interface automation using yosys, nextpnr, and iceprog.
-
-
 ## How to Use
 
 1. Build the project:
@@ -97,4 +88,11 @@ Key components:
 - Home Automation: Control lighting, fans, or appliances remotely via UART commands through serial interfaces or microcontrollers.
 - Robotics: Receive movement or status commands over UART to drive motors, servos, or signaling LEDs.
 - Industrial Controls: Actuate relays or indicators in response to serial control signals in embedded systems.
+
+# Project Structure
+
+- `top.v` — Top-level module integrating UART RX and LED control logic.
+- `uart_rx.v` — UART receiver module (8 data bits, no parity, 1 stop bit).
+- `vsdsquadron.pcf` — Pin constraints file mapping FPGA pins to LEDs and UART signals.
+- `Makefile` — Build, flash, and terminal interface automation using yosys, nextpnr, and iceprog.
  
