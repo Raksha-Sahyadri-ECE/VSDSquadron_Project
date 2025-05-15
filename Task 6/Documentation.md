@@ -8,18 +8,18 @@ The system responds to user input sent via UART (e.g., from a computer terminal 
 ### System Architecture
 Key Modules:
 
-UART Receiver (uart_rx_8n1)
-Input Decoder and Display Controller
-7-Segment Driver
+- UART Receiver (uart_rx_8n1)
+- Input Decoder and Display Controller
+- 7-Segment Driver
 
 ### How to Use
-Build the project: make build
+- Build the project: make build
 
-Flash the bitstream to your FPGA: sudo make flash
+- Flash the bitstream to your FPGA: sudo make flash
 
-Open a serial terminal at 9600 baud: Example: PuTTY
+- Open a serial terminal at 9600 baud: Example: PuTTY
 
-Type any number via UART and it will be displayed on the seven segment.
+- Type any number via UART and it will be displayed on the seven segment.
 
 # Theme 2
 ## FPGA-Based UART-Controlled Actuator System
@@ -34,20 +34,18 @@ This project exemplifies how to decode serial UART commands and translate them i
 ### System Architecture
 Key components:
 
-UART Receiver Module: Receives and decodes serial data.
-Control Logic: Manages LED states based on received commands.
-Output Pins: Drive LEDs to reflect current actuator state.
+- UART Receiver Module: Receives and decodes serial data.
+- Control Logic: Manages LED states based on received commands.
+- Output Pins: Drive LEDs to reflect current actuator state.
 
 ### How to Use
-Build the project: make build
+- Build the project: make build
 
-Flash the bitstream to your FPGA: sudo make flash
+- Flash the bitstream to your FPGA: sudo make flash
 
-Open a serial terminal at 9600 baud: Example: PuTTY
+- Open a serial terminal at 9600 baud: Example: PuTTY
 
-Type 1, 2, 3, 4 via UART — LEDs will cycle through:
-
-3 LEDs ON → 2 LED ON → 1 LED ON → OFF → ...
+- Type 1, 2, 3, 4 via UART — LEDs will cycle through: 3 LEDs ON → 2 LED ON → 1 LED ON → OFF → ...
 
 # Project Structure
 top.v — Top-level module integrating UART RX and LED control logic.
