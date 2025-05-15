@@ -5,11 +5,11 @@
 
 This project implements a system where an FPGA receives serial data over UART and dynamically displays it on an output device — 7-segment display. It demonstrates how FPGAs can be used to bridge communication and real-time display systems.
 
-The system responds to user input sent via UART (e.g., from a computer terminal or microcontroller) and updates the displayed value accordingly. In our case, pressing keys sequentially displays numbers from 0 to 9 in order.
+The system responds to user input sent via UART (e.g., from a computer terminal or microcontroller) and updates the displayed value accordingly. Pressing respective keys displays corresponding numbers.
 
 ## Key Learning Objectives
 
-- Implement UART reception in Verilog:** Understand how to build and integrate a UART receiver module using an 8N1 protocol (8 data bits, no parity, 1 stop bit).
+- Implement UART reception in Verilog: Understand how to build and integrate a UART receiver module using an 8N1 protocol (8 data bits, no parity, 1 stop bit).
 - Interface with display hardware: Learn to drive a 7-segment display using segment encoding and GPIO control.
 - Synchronize serial and display data: Buffer incoming serial bytes and decode them for display in real time.
 - Develop a state-driven display controller: Use finite state machines to manage numeric transitions and invalid input handling.
@@ -20,6 +20,20 @@ Key Modules:
 - UART Receiver (uart_rx_8n1)
 - Input Decoder and Display Controller
 - 7-Segment Driver
+
+## How to Use
+
+1. Build the project:
+   make build
+
+2. Flash the bitstream to your FPGA:
+   sudo make flash
+   
+3. Open a serial terminal at 9600 baud:
+   Example: PuTTY
+   
+4. Type any number via UART and it will be displayed on the seven segment.
+
 
 ## Potential Applications
 
