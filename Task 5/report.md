@@ -1,3 +1,34 @@
+# Theme 1
+# FPGA-Based UART-Controlled Display System
+
+## Overview
+
+This project implements a system where an FPGA receives serial data over UART and dynamically displays it on an output device — 7-segment display. It demonstrates how FPGAs can be used to bridge communication and real-time display systems.
+
+The system responds to user input sent via UART (e.g., from a computer terminal or microcontroller) and updates the displayed value accordingly. In our case, pressing keys sequentially displays numbers from 0 to 9 in order.
+
+## Key Learning Objectives
+
+- Implement UART reception in Verilog:** Understand how to build and integrate a UART receiver module using an 8N1 protocol (8 data bits, no parity, 1 stop bit).
+- Interface with display hardware: Learn to drive a 7-segment display using segment encoding and GPIO control.
+- Synchronize serial and display data: Buffer incoming serial bytes and decode them for display in real time.
+- Develop a state-driven display controller: Use finite state machines to manage numeric transitions and invalid input handling.
+
+## System Architecture
+
+Key Modules:
+- UART Receiver (uart_rx_8n1)
+- Input Decoder and Display Controller
+- 7-Segment Driver
+
+## Potential Applications
+
+- Digital clocks: Update time values over UART and display on 7-segment or LCD modules.
+- Serial-driven UI elements: Provide dynamic interfaces for embedded systems via UART inputs.
+- Test and debug panels: Display real-time sensor readings, debug values, or user interactions received via UART.
+
+  
+# Theme 2
 # FPGA-Based UART-Controlled Actuator System
 
 ## Overview
